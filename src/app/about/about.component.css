@@ -61,8 +61,30 @@
 
 
 
-
-
+@keyframes bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(10px); /* Ajusta la distancia que se moverá hacia abajo */
+    }
+  }
+  
+  .scroll-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #ffffff;
+    text-decoration: none;
+    animation: bounce 1.5s infinite; /* Aplicamos la animación */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .scroll-arrow:hover {
+    transform: translateX(-50%) scale(1.2); /* La animación hover no afecta al movimiento */
+  }
 
 /* Global */
 body {

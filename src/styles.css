@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 html {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 120%);
+  scroll-behavior: smooth;
 }
 
 #stars {

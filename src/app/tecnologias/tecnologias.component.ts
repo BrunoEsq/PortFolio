@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './tecnologias.component.css'
 })
 export class TecnologiasComponent {
+  
+  constructor(){
+
+  }
+
 
 }

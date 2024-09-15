@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    scroll-snap-type: y mandatory; 
+    overflow-y: scroll; 
+    overflow: hidden;
+  }
+  
+  section {
+    scroll-snap-align: start; 
+    align-items: center;
+    justify-content: center;
+  }
