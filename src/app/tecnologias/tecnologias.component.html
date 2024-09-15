@@ -5,9 +5,9 @@
 
 
 .container {
-  backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(130%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.25);
+ 
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);  
   padding: 38px;  
@@ -40,7 +40,7 @@
 
 .banner-image2 {
 
-background-image: url("quest.jpg");
+background-image: url("quest.png");
 background-position: center;
 background-size: cover;
 height: 300px;
@@ -114,7 +114,22 @@ p {
   filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
   transition: all .3s ease;    
 }
+
+.tec{
+  width: 40px;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.project{
+  margin-top: 550px ;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
+<h1 class="project">My Projects</h1>
 <div class="projects">
   <span class="container">
     <span class="wrapper">
@@ -122,6 +137,8 @@ p {
       <h1> MyAnalyst </h1>
       <p>
         Create & consult your charts </p>
+      <img src="angularjs.png" class="tec" alt="angular">
+      <img src="typescript.png" class="tec" alt="angular">
     </span>
     <span class="button-wrapper">
       <button class="btn outline"><a href="https://my-analyst.vercel.app/">DETAILS</a></button>
@@ -132,8 +149,10 @@ p {
   <span class="container" style="margin: 50px;">
     <span class="wrapper">
       <section class="banner-image2"> </section>
-      <h1> Quest Man </h1>
+      <h1> Quest Man. </h1>
       <p>Lorem ipsum dolor sit amet</p>
+      <img src="angularjs.png" class="tec" alt="angular">
+      <img src="typescript.png" class="tec" alt="angular">
     </span>
     <span class="button-wrapper">
       <button class="btn outline"><a href="https://quest-manager.vercel.app/">DETAILS</a></button>
