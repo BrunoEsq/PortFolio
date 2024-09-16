@@ -1,3 +1,50 @@
+<style>
+  #scroll-arrow2 {
+    position: fixed;
+    bottom: 20px;
+    left: 49%;
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite;
+    opacity: 1;
+    pointer-events: auto;
+    /* Habilita eventos del mouse por defecto */
+  }
+
+  #scroll-arrow2.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Desactiva eventos del mouse cuando está oculto */
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    /* Desplaza hacia arriba */
+    100% {
+      transform: translateY(0);
+    }
+
+    /* Vuelve a la posición inicial */
+  }
+
+  .scroll-arrow2 {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+    transition: transform .3s ease-in-out
+  }
+</style>
 <h1 class="project">My Projects</h1>
 <div class="projects">
   <span class="container">
@@ -30,3 +77,7 @@
   </span>
 
 </div>
+
+<a href="#contact" id="scroll-arrow2" class="scroll-arrow2">
+  <i class="fas fa-chevron-down"></i>
+</a>
