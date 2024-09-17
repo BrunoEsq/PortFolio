@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  showModal = false;
+
   public sendEmail(e: Event) {
     e.preventDefault();
 
@@ -19,6 +22,12 @@ export class ContactComponent {
       .then(
         () => {
           console.log('SUCCESS!');
+          this.showModal = true; // Muestra el modal al enviar correctamente
+          
+          // Oculta el modal después de 3 segundos
+          setTimeout(() => {
+            this.showModal = false;
+          }, 3000);
         },
         (error) => {
           console.log('FAILED...', (error as EmailJSResponseStatus).text);

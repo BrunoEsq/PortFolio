@@ -170,3 +170,29 @@ body{
 #Highlighted-form.no-placeholder .error-message {
     top:0;
 }
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1; /* Aparece sobre el contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal.show {
+    display: flex; /* Mostrar el modal cuando la clase 'show' esté presente */
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #726659;
+  }

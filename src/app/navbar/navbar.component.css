@@ -1,6 +1,6 @@
-
 nav {
     padding: 1rem;
+    margin-left: 100px;
 }
 
 ul {
@@ -13,7 +13,7 @@ ul {
 
 ul li {
     margin: 30px;
-    font-size: calc(1rem + 1vw); /* Escala la fuente en función del ancho de la pantalla */
+    font-size: calc(1rem + 1vw);
 }
 
 a {
@@ -36,5 +36,9 @@ a:hover {
     ul li {
         margin: 0.5rem 0;
     }
-}
 
+    nav {
+        padding: 1rem;
+        margin-left: 0px;
+    }
+}
