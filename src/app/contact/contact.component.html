@@ -95,8 +95,13 @@
 
     #contactForm {
         position: relative;
-        width: 500px;
-        margin: 0px auto 100px auto;
+        width: 100%;
+        max-width: 500px;
+        /* Fija un máximo de 500px */
+        margin: 0 auto;
+        /* Centrará el formulario horizontalmente */
+        padding: 0 20px;
+        /* Añade un padding en ambos lados */
     }
 
     input {
@@ -182,6 +187,44 @@
         text-align: center;
         letter-spacing: 7px;
     }
+
+    .contenedor {
+        margin-left: 50px;
+        margin-right: 65px;
+    }
+
+    .conpadre {
+        background-color: white;
+        width: 100%;
+        height: 500px;
+    }
+
+    @media (max-width: 768px) {
+        #contactForm {
+            width: 100%;
+            /* Se adapta al ancho disponible */
+            margin-left: -50px;
+            
+            /* Centrado en pantallas pequeñas */
+            /* Ajusta el padding para mantener margen */
+        }
+
+        .contenedor {
+            margin-left: 0;
+            margin-right: 0;
+            /* Asegúrate de que el contenedor no añada márgenes adicionales */
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .conpadre {
+            background-color: white;
+            width: 100%;
+            height: 400px;
+            padding-left: 20px;
+
+        }
+    }
 </style>
 <svg width="100%" height="100%" viewBox="0 0 1440 79" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
     style="margin-bottom: -5; margin-top: 300px;">
@@ -198,20 +241,19 @@
 <!-- Modal -->
 <div id="successModal" class="modal" [ngClass]="{'show': showModal}">
     <div class="modal-content">
-      <p>¡Mensaje enviado correctamente!</p>
+        <p>¡Mensaje enviado correctamente!</p>
     </div>
-  </div>
-  
-  <!-- Contact Form -->
-  <div style="background-color: white; width: 100%; height: 500px; ">
-    <div style="margin-left: 50px; margin-right: 65px;">
-      <header>CONTACT</header>
-      <form (submit)="sendEmail($event)" id="contactForm" class="contact-form">
-        <input id="name" type="text" name="name" ngModel placeholder="NAME">
-        <input id="email" type="text" name="email" ngModel placeholder="E-MAIL">
-        <textarea id="message" type="text" name="message" ngModel placeholder="MESSAGE"></textarea>
-        <input id="submit" type="submit" value="GO!" class="submit-button">
-      </form>
+</div>
+
+<!-- Contact Form -->
+<div class="conpadre">
+    <div class="contenedor">
+        <header>CONTACT</header>
+        <form (submit)="sendEmail($event)" id="contactForm" class="contact-form">
+            <input id="name" type="text" name="name" ngModel placeholder="NAME">
+            <input id="email" type="text" name="email" ngModel placeholder="E-MAIL">
+            <textarea id="message" type="text" name="message" ngModel placeholder="MESSAGE"></textarea>
+            <input id="submit" type="submit" value="GO!" class="submit-button">
+        </form>
     </div>
-  </div>
-  
+</div>
