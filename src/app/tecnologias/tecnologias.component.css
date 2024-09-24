@@ -23,30 +23,52 @@
 .banner-image {
     background-image: url(../../../public/homelogo.png);
     background-position: center;
-    background-size: cover;
+    background-size: 230px;
+    background-repeat: no-repeat;
     height: 300px;
     width: 100%;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.255)
+    border: 1px solid rgba(255, 255, 255, 0.255);
+    transition: 0.1s;
+}
+
+.banner-image:hover{
+    background-size: 240px;
+    transition: 0.1s;
 }
 
 .banner-image2 {
     background-image: url(../../../public/quest.png);
     background-position: center;
-    background-size: cover;
+    background-size: 230px;
+    background-repeat: no-repeat;
     height: 300px;
     width: 100%;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.255)
+    border: 1px solid rgba(255, 255, 255, 0.255);
+    transition: 0.1s;
 }
+
+.banner-image2:hover{
+    background-size: 240px;
+    transition: 0.1s;
+}
+
 .banner-image3 {
     background-image: url(../../../public/logo2.png);
     background-position: center;
-    background-size: cover;
+    background-size: 230px;
+    background-repeat: no-repeat;
     height: 300px;
     width: 100%;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.255)
+    border: 1px solid rgba(255, 255, 255, 0.255);
+    transition: 0.1s;
+}
+
+.banner-image3:hover{
+    background-size: 240px;
+    transition: 0.1s;
 }
 
 h1 {
